@@ -33,3 +33,4 @@ Things you may want to cover:
 * Ruby
 * Rails
 * Git(HTTPSからSSH通信へ変更)
+* Test
