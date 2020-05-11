@@ -45,4 +45,9 @@ module SessionsHelper
     cookies.delete(:remember_token)
   end
   
+  # 渡されたユーザーがログイン済みのユーザーであればtrueを返します。
+  def current_user?(user)
+    user == current_user
+  end
+  
 end
