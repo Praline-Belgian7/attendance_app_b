@@ -15,6 +15,8 @@ class User < ApplicationRecord
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 },
             allow_nil: true
+            
+  validates :department, length: { in: 2..30 }, allow_blank: true
   
   # ランダムなトークンを返します。
   def User.new_token
