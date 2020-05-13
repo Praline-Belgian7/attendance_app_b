@@ -18,6 +18,9 @@ class User < ApplicationRecord
             
   validates :department, length: { in: 2..30 }, allow_blank: true
   
+  validates :basic_time, presence: true
+  validates :work_time, presence: true
+  
   # ランダムなトークンを返します。
   def User.new_token
     SecureRandom.urlsafe_base64
